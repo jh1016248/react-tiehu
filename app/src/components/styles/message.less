@@ -1,0 +1,38 @@
+.message{
+    display: flex;
+    margin-bottom: 10px;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+    >div{
+        flex: 1;
+        font-size: 16px;
+        max-width: 80%;
+        p{
+            color: #000;
+        }
+        div{
+            display: inline-block;
+            padding: 3px 5px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgb(100, 100, 100);
+        }
+    }
+    &.host{
+        flex-direction: row-reverse;
+        img{
+            margin: 0 0 0 10px;
+        }
+        >div{
+            float: right;
+            text-align: right;
+            div{
+                text-align: left;
+            }
+        }
+    }
+}

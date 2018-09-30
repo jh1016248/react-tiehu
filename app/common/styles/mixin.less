@@ -1,0 +1,44 @@
+.tin(@time: 0.3s, @delay: 0) {
+    -webkit-transition-duration: @time;
+    -webkit-transition-delay: @delay;
+    -webkit-transform: translate(0);
+    opacity: 1;
+}
+
+.translate(@prop1, @prop2) {
+    transform: translate(@prop1, @prop2);
+    -webkit-transform: translate(@prop1, @prop2);
+}
+
+.transform(@t) {
+    transform: @t;
+    -webkit-transform: @t;
+}
+
+.transition(@prop) {
+    transition: @prop;
+    -webkit-transition: @prop;
+}
+
+.transition-delay(@prop) {
+    transition-delay: @prop;
+    -webkit-transition-delay: @prop;
+}
+
+.transition-duration(@prop) {
+    transition-duration: @prop;
+    -webkit-transition-duration: @prop;
+}
+
+.animation(@prop) {
+    animation: @prop;
+    -webkit-animation: @prop;
+}
+.scale(@prop){
+    transform: scale(@prop);
+    -webkit-transform: scale(@prop);
+}
+.rotate(@prop){
+    transform: rotate(@prop);
+    -webkit-transform: rotate(@prop);
+}

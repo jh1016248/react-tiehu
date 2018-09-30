@@ -1,0 +1,255 @@
+// 从底部滑入
+.slide-up-enter-active,
+.slide-up-leave-active {
+    transition: all .3s ease;
+}
+
+.slide-up-enter {
+    transition: all .3s ease;
+    transform: translateY(100%);
+}
+
+.slide-up-leave-to {
+    transition: all .3s ease;
+    transform: translateY(100%);
+}
+// 从右侧滑入
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition: all .3s ease-in-out;
+}
+
+.slide-right-enter {
+    transform: translateX(100%);
+}
+
+.slide-right-leave-to {
+    transform: translateX(-100%);
+}
+
+// 从右侧滑动淡入
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+    transform: translateX(0.1rem);
+    opacity: 0;
+}
+
+// 淡入
+.fade-in-enter-active,
+.fade-in-leave-active {
+    transition: all .3s ease;
+}
+
+.fade-in-enter,
+.fade-in-leave-to {
+    transition: all .5s ease;
+    opacity: 0;
+}
+
+// 淡入-快速
+.fade-in-fast-enter-active,
+.fade-in-fast-leave-active {
+    transition: all .3s ease;
+}
+
+.fade-in-fast-enter,
+.fade-in-fast-leave-to {
+    // transition: all .3s ease;
+    opacity: 0;
+}
+
+// 淡入-快速
+.slide-in-fast-enter-active,
+.slide-in-fast-leave-active {
+    transition: all .3s ease;
+}
+
+.slide-in-fast-enter,
+.slide-in-fast-leave-to {
+    // transition: all .3s ease;
+    height: 0;
+}
+// 淡入-快速
+.fade-in-quick-enter-active {
+    transition: all .3s ease;
+}
+.fade-in-quick-leave-active {
+    transition: all .3s ease;
+}
+
+.fade-in-quick-enter{
+    // transition: all .3s ease;
+    opacity: 0;
+}
+.fade-in-quick-leave-to {
+    // transition: all .3s ease;
+    opacity: 0;
+}
+
+// 淡入-快速
+.fade-in-quick-enter-active {
+}
+
+.fade-in-quick-enter,
+.fade-in-quick-leave-to {
+    // transition: all .3s ease;
+    opacity: 0;
+}
+
+// 从上往下-快速
+.drop-down-enter-active {
+    -webkit-animation-name: dropDown;
+    animation-name: dropDown;
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-duration: .6s;
+    -webkit-animation-iteration-count: 1;
+    opacity: 1;
+}
+
+.drop-down-leave-active {}
+
+.drop-down-enter {}
+
+.drop-down-leave-to {
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+@-webkit-keyframes dropDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blingbling {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleInShake {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+// 向左指向
+@-webkit-keyframes shakeLeft {
+    0% {
+        .translate(0, 0);
+    }
+    50% {
+        .translate(-10px, 0);
+    }
+    100% {
+        .translate(0, 0);
+    }
+}
+
+// 向右指向
+@-webkit-keyframes shakeRight {
+    0% {
+        .translate(0, 0);
+    }
+    50% {
+        .translate(10px, 0);
+    }
+    100% {
+        .translate(0, 0);
+    }
+}
+
+// 左右指向
+@-webkit-keyframes shakeLeftRight {
+    0% {
+        .translate(0, 0);
+    }
+    10% {
+        .translate(-10px, 0);
+    }
+    30% {
+        .translate(10px, 0);
+    }
+    40% {
+        .translate(0, 0);
+    }
+    100% {
+        .translate(0, 0);
+    }
+}
+
+// 上下移动
+@-webkit-keyframes upDown {
+    0% {
+        .translate(0, 0);
+    }
+    50% {
+        .translate(0, -15px);
+    }
+    100% {
+        .translate(0, 0);
+    }
+}
