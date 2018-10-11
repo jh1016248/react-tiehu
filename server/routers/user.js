@@ -1,5 +1,5 @@
 const router = require('koa-router')()
-let User = require('../dbhelper/userHelper');
+let User = require('../controllers/user');
 
 const routers = router
     .get('/user', async ctx => {

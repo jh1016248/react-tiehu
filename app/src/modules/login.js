@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { Input, Icon, Button, message } from 'antd'
 import { hashHistory } from 'react-router'
+import Background from '../components/background'
 class Login extends Component {
     static propTypes = {
         user: PropTypes.object,
@@ -21,14 +22,6 @@ class Login extends Component {
             loginName,
             password
         }
-        // let userInfo = {
-        //     id: 1,
-        //     name: 'jh',
-        //     avatar: 'static/images/avatar/2.jpg'
-        // }
-        // this.props.setUserInfo(userInfo)
-        // hashHistory.push('/main')
-        
         $client.postData($client.API.login, sendData).then(res => {
             if(res.code == 1000) {
                 localStorage.token = res.data.token;
@@ -52,6 +45,7 @@ class Login extends Component {
     render() {
         return (
             <div>
+                <Background></Background>
                 <div className="login-wrap">
                     <div className="avatar text-c">
                         <img src="static/images/avatar/avatar.png" />

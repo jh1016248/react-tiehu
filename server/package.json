@@ -5,6 +5,7 @@
   "dependencies": {
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
+    "day": "^0.0.2",
     "fs": "^0.0.1-security",
     "glob": "^7.1.3",
     "http": "^0.0.0",
@@ -15,6 +16,7 @@
     "koa-jwt": "^3.5.1",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.6",
+    "moment": "^2.22.2",
     "mongoose": "^5.2.14",
     "path": "^0.12.7",
     "socket.io": "^2.1.1"
