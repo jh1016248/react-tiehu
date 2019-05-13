@@ -23,7 +23,7 @@ class Index extends Component {
     }
 
     componentWillMount() {
-        if(!this.props.user.id) {
+        if (!this.props.user.id) {
             hashHistory.push('/')
         }
         this.getArticalList();
@@ -45,7 +45,7 @@ class Index extends Component {
     render() {
         return (
             <div className="container">
-                <Header user={this.props.user}/>
+                <Header user={this.props.user} />
 
                 <div className="wrap mt20 main-container">
                     <Row>
@@ -60,7 +60,7 @@ class Index extends Component {
                                     {
                                         (
                                             this.state.articleList.map(item => {
-                                                return (<ForumItem key={item.id} item={item}/>)
+                                                return (<ForumItem key={item.id} item={item} />)
                                             })
                                         )
                                     }
@@ -68,7 +68,7 @@ class Index extends Component {
                             </div>
                         </Col>
                         <Col span={6} offset={1}>
-                            <Aside user={this.props.user} className="bde"/>
+                            {/* <Aside user={this.props.user} className="bde" /> */}
                         </Col>
                     </Row>
                 </div>
@@ -82,6 +82,5 @@ const mapStateToProps = state => {
         user: state.user.user
     }
 }
-
 
 export default connect(mapStateToProps)(Index)

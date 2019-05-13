@@ -1,0 +1,5 @@
+@import './styles/index.less';
+
+html, body, :global(#root) {
+  margin: 0;
+}

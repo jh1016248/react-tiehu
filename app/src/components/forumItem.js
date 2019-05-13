@@ -15,7 +15,7 @@ class ForumItem extends Component {
     }
 
     toDetail() {
-        hashHistory.push('/detial/' + this.props.item.id)
+        hashHistory.push('/detail/' + this.props.item.id)
     }
     
     render() {

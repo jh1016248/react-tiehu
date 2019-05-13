@@ -10,7 +10,7 @@ window.$client = $client;
 
 import '../common/styles/index.less';
 
-const store = createStore(reducer)
+const store = createStore(reducer);
 
 render(
     <Provider store={store}>

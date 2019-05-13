@@ -3,9 +3,11 @@ import { Router, IndexRoute, Link, Route, hashHistory } from 'react-router'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Index from '../modules/index'
-import Register from '../modules/register'
-import Login from '../modules/login'
+
 import { message } from 'antd';
+import routers from './routers';
+import Detail from '../modules/detail';
+
 class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
@@ -74,9 +76,13 @@ class router extends React.Component {
 			<Router history={hashHistory}>
 				<Route path="/" component={AppContainer}>
 					<IndexRoute component={Index} />
-					<Route path="/login" component={Login}></Route>
-					<Route path="/register" component={Register}></Route>
-					<Route path="/main" component={Index}></Route>
+                    {
+                        routers.map((item, index) => {
+                            return (
+                                <Route path={item.path} key={index} component={item.component}></Route>
+                            )
+                        })
+                    }
 				</Route>
 			</Router>
 		)

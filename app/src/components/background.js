@@ -5,12 +5,12 @@ class Background extends Component {
     static propTypes = {
 
     }
-    
-    constructor(){
+
+    constructor() {
         super()
         this.state = {
             bgIndex: 1,
-            pageW: window.innerWidth, 
+            pageW: window.innerWidth,
             pageH: window.innerHeight,
             changeBackgroundTimer: null,
         }
@@ -26,9 +26,9 @@ class Background extends Component {
 
     render() {
         return (
-          <div className="background" style={{
-              backgroundImage: "url(static/images/bg/" + this.state.bgIndex + ".jpg)"
-          }}></div> 
+            <div className="background" style={{
+                backgroundImage: "url(static/images/bg/" + this.state.bgIndex + ".jpg)"
+            }}></div>
         )
     }
 }
