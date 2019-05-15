@@ -5,6 +5,24 @@ function parseJSON(response) {
   return response.json();
 }
 
+function formatQueryData(data) {
+  if(!data || data === '') {
+      return '';
+  }
+  let list = [];
+  for(let i in data) {
+      if(typeof data[i] === 'object') {
+          for(let subIndex in data[i]) {
+              data[i][subIndex] !== '' && list.push(i + '.' + subIndex + '=' + data[i][subIndex]);
+          }
+      }
+      else{
+          list.push(i + '=' + data[i])
+      }
+  }
+  return list.join("&")
+}
+
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
     return response;
@@ -24,16 +42,16 @@ function checkStatus(response) {
  */
 const request = {
   get(url, options) {
+    url += "?" + formatQueryData(options)
     return fetch(HOST + url, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: options
     })
       .then(checkStatus)
       .then(parseJSON)
-      .then(data => ({ data }))
+      .then(data => data)
       .catch(err => ({ err }));
   },
   post(url, options) {

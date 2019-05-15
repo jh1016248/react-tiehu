@@ -4,7 +4,6 @@ import withRouter from 'umi/withRouter';
 import Header from './Header';
 
 function Layout({ location, children }) {
-    console.log(location)
     function layoutRender() {
         if (location.pathname === '/login') {
             return (
