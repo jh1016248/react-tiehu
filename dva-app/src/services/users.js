@@ -1,5 +1,5 @@
 import request from '../utils/request';
 
-export function login({ account: loginName, password }) {
-    return request.post(`/api/user/login`, { loginName, password })
+export function login({ account: username, password }) {
+    return request.post(`/user/login`, { username, password })
 }

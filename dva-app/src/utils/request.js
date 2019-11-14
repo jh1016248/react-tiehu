@@ -1,5 +1,5 @@
 import fetch from 'dva/fetch';
-const HOST = 'http://localhost:3000';
+const HOST = 'http://localhost:4000';
 
 function parseJSON(response) {
   return response.json();
@@ -46,7 +46,8 @@ const request = {
     return fetch(HOST + url, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.token || ''
       },
     })
       .then(checkStatus)
@@ -58,7 +59,8 @@ const request = {
     return fetch(HOST + url, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.token || ''
       },
       body: JSON.stringify(options)
     })
